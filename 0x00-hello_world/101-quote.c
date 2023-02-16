@@ -1,7 +1,7 @@
 #include <unistd.h>
 /**
- * Main - passes the write
- * Return:is set to 1 it returns an error
+ * main - passes the write
+ * Return: is set to 1 it returns an error
  */
 int main(void)
 {
