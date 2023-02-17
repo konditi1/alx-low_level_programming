@@ -1,14 +1,13 @@
 #include <stdio.h>
 /**
-* main- entry point 
+* main- entry point
 * Return: 0 if successfull
 */
 int main(void)
 {
 int i;
-for (i = 122; i >= 97; i--) {
+for (i = 122; i >= 97; i--)
 putchar(i);
-}
 
 putchar('\n');
 
