@@ -1,7 +1,9 @@
 #include <stdio.h>
+
 /**
-* main prints lower case numbers and scipe e and q
-* Return : 0 if successful
+* main-entry point of the program
+* prints lower case numbers and scipe e and q
+* Return: 0 if successful
 */
 int main(void)
 {
