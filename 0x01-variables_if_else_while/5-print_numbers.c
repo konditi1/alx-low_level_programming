@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
-* main-entry point 
-* printd single digit number of base 10
+* main-entry point
+* * * printd single digit number of base 10
 * Return: 0 if successful
 */
 int main(void)
