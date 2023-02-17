@@ -13,7 +13,7 @@ while (str[i] != '\0')
 putchar(str[i]);
 i++;
 }
-
-return 0;
+putchar('\n');
+return (0);
 }
 
