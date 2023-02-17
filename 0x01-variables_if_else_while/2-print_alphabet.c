@@ -1,5 +1,8 @@
 #include <stdio.h>
-
+/**
+ * main - print lowerCase alphabet
+ * Return: 0 if succesfull
+ */
 int main(void)
 {
     char *str = "abcdefghijklmnopqrstuvwxyz";
@@ -8,7 +11,7 @@ int main(void)
     while (str[i] != '\0')
     {
         putchar(str[i]);
-        putchar('\n');  // Add a line break after each character
+        putchar('\n');  
         i++;
     }
 
