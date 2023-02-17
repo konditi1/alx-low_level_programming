@@ -10,10 +10,10 @@ int i;
 
 for (i = 0; i < 10; i++)
 {
-putchar(i + '0');  // Convert the integer i to its corresponding character
+putchar(i + '0');
 }
 
-putchar('\n');  // Print a newline character
+putchar('\n');
 
 return (0);
 }
