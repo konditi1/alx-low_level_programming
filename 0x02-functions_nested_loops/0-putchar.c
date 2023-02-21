@@ -1,18 +1,18 @@
 #include "main.h"
-
 /**
 * main- entry point
-* Return:0 if successfull
+* Return: 0 when successful
 */
 int main(void)
 {
-char *putch_ar = "putchar";
-int i;
-
-if (i = 0; putch_ar[i] != '\0'; i++)
-{
-_putchar(putch_ar[i]);
+_putchar('_');
+_putchar('p');
+_putchar('u');
+_putchar('t');
+_putchar('c');
+_putchar('h');
+_putchar('a');
+_putchar('r');
 _putchar('\n');
-}
 return (0);
 }
