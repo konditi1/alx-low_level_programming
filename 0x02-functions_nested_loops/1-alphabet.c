@@ -14,13 +14,3 @@ _putchar(i);
 }
 _putchar('\n');
 }
-/**
-* main - entry point
-* Return:0 if successful
-*/
-
-int main(void)
-{
-print_alphabet();
-return (0);
-}
