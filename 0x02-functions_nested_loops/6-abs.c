@@ -2,7 +2,7 @@
 
 /**
 * _abs -  computes the absolute value of an integer.
-* @int: any positive or negative parameter
+* @r: any positive or negative parameter
 * Return: an int if succesful
 */
 
