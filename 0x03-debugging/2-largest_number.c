@@ -34,10 +34,9 @@ if (c >= a)
 {
 largest = c;
 }
-else if( b > a)
+else if( b >= a)
 {
 largest = b;
 }
 return (largest);
 }
-
