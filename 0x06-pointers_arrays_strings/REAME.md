@@ -1,3 +1,4 @@
+#!/bin/bash
 README
 
 C - More pointers, arrays and strings
