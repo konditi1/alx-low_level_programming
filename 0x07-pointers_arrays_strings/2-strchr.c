@@ -23,6 +23,6 @@ return (s);
 }
 
 /* If the search character was not found, return NULL */
-return ((void*)0);
+return ((void *)0);
 }
 
