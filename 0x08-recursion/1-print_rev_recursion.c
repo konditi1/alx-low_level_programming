@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * _print_rev_recursion- print string in reverse
+ * make sure u call b4 putchar
+ * @s: string to reverse
+ */
 void _print_rev_recursion(char *s)
 {
 if (*s == '\0')
