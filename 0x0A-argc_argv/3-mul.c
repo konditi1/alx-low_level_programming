@@ -12,7 +12,7 @@ int m;
 int n;
 if (argc != 3)
 {
-printf("error\n");
+printf("Error\n");
 return (1);
 }
 n = atoi(argv[1]);
