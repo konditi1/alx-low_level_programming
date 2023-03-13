@@ -21,7 +21,7 @@ s2 = "";
 
 len1 = strlen(s1);
 len2 = strlen(s2);
-result =(char *)malloc(len1 + len2 + 1);
+result = (char *)malloc(len1 + len2 + 1);
 
 if (result == NULL)
 return (NULL);
