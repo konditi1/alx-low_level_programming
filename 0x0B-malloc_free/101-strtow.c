@@ -36,7 +36,7 @@ return (count);
 char **strtow(char *str)
 {
 size_t i, j, num_words, word_len;
-char **words, *word_start, *word_end;
+char **words, *word_start;
 
 if (!str || !*str)
 return (NULL);
@@ -59,7 +59,6 @@ while (*str && *str != ' ')
 word_len++;
 str++;
 }
-word_end = str - 1;
 words[i] = malloc(sizeof(char) * (word_len + 1));
 if (!words[i])
 {
