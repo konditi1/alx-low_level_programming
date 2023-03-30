@@ -3,7 +3,7 @@ hello: db 'Hello, Holberton', 10, 0
 fmt: db '%s', 10, 0
 
 section .text
-global _start
+global main
 
 main:
 ; Push arguments to stack
