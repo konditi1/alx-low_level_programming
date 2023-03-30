@@ -1,4 +1,5 @@
 #include "lists.h"
+#include<stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -11,22 +12,21 @@
 */
 list_t *add_node(list_t **head, const char *str)
 {
+list_t *new_node;
+char *str_copy;
+
 if (str == NULL)
-{
-return (NULL); /* invalid input */
-}
+return (NULL);
 
-list_t *new_node = malloc(sizeof(list_t));
+new_node = malloc(sizeof(list_t));
 if (new_node == NULL)
-{
-return (NULL); /* failed to allocate memory */
-}
+return (NULL);
 
-char *str_copy = strdup(str);
+str_copy = strdup(str);
 if (str_copy == NULL)
 {
-free(new_node); /* clean up memory allocated so far */
-return (NULL); /* failed to duplicate string */
+free(new_node);
+return (NULL);
 }
 
 new_node->str = str_copy;
