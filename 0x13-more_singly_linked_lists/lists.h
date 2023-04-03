@@ -4,15 +4,15 @@
 #include <string.h>
 #include <stdio.h>
 /**
- * struct listint_s - is a singly linked list
- * @n: is an integer
- * @next: pointer to the next node
- * Description: singly linked list node structure
- */
+* struct listint_s - is a singly linked list
+* @n: is an integer
+* @next: pointer to the next node
+* Description: singly linked list node structure
+*/
 typedef struct listint_s
 {
-    int n;
-    struct listint_s *next;
+int n;
+struct listint_s *next;
 }
 listint_t;
 
