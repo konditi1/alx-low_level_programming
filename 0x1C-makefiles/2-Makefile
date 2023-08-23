@@ -2,13 +2,13 @@
 NAME = school
 
 # Macro for source files
-SRCS = main.c school.c
+SRC = main.c school.c
 
 # Macro for the compiler
 CC = gcc
 
 # Creating object names
-OBJ = $(SRCS:.c=.o)
+OBJ = $(SRC:.c=.o)
 
 # Creating the compiled .o
 all: $(NAME)
