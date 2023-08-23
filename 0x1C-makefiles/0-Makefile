@@ -4,7 +4,3 @@ all: school
 # Compile the source files and build the executable
 school: main.c school.c
 	gcc main.c school.c -o school
-
-# Clean rule to remove generated files
-clean:
-	rm -f school
