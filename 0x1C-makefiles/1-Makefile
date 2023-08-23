@@ -1,0 +1,13 @@
+# Define the all rule
+all: school
+
+# Macros: compiler to use
+CC = gcc
+
+# Macros: source files (all .c files in the current directory)
+SRC = main.c school.c
+
+# Rule for compiling the executable
+school: $(SRC)
+	$(CC) $(SRC) -o school
+ 
