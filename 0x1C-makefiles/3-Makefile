@@ -26,10 +26,15 @@ $(NAME): $(OBJ)
 
 # Clean rule to remove obj files and the executable
 clean:
+	@$(RM) $(NAME)
+	@$(RM) *#
 	$(RM) *~ $(NAME)
 
-fclean: clean
-	$(RM) $(NAME)
+fclean: 
+	@$(RM) $(NAME)
+	@$(RM) *#
+	$(RM) *~ $(NAME)
+	$(RM) $(OBJ)
 
 # Rule to remove object files
 oclean:
