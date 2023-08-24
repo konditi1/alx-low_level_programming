@@ -1,5 +1,3 @@
-#!/usr/bin/make -f
-
 # Makefile for building 'school' executable
 
 # Compiler to use
@@ -7,6 +5,9 @@ CC = gcc
 
 # Source files
 SRC = main.c school.c
+
+# Delete files
+RM = rm -f
 
 # Object files
 OBJ = $(SRC:.c=.o)
@@ -22,10 +23,16 @@ all: $(NAME)
 
 # Rule to build the executable
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
 
-# Rule to clean up temporary and executable files
+# Rule to compile source file to obj file
+%.o: %.c m.h
+	$(CC) -c $(CFLAGS) $< -o $@
+
+# Clean rule to remove temporary and executable files
 clean:
+	@$(RM) $(NAME)
+	@$(RM) *#
 	$(RM) *~ $(NAME)
 
 # Rule to remove object files
@@ -33,12 +40,13 @@ oclean:
 	$(RM) $(OBJ)
 
 # Rule to remove temporary, executable, and object files
-fclean: clean oclean
+fclean:
+	$(RM) $(NAME)
+	$(RM) *#
+	$(RM) *~ $(NAME)
+	$(RM) $(OBJ)
 
 # Rule to recompile all source files
 re: fclean all
-
-# Include dependency on m.h
-$(OBJ): m.h
 
 .PHONY: all clean oclean fclean re
