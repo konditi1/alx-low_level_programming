@@ -6,9 +6,6 @@ CC = gcc
 # Source files
 SRC = main.c school.c
 
-# Delete files
-RM = rm -f
-
 # Object files
 OBJ = $(SRC:.c=.o)
 
@@ -31,20 +28,14 @@ $(NAME): $(OBJ)
 
 # Clean rule to remove temporary and executable files
 clean:
-	@$(RM) $(NAME)
-	@$(RM) *#
-	$(RM) *~ $(NAME)
+	$(RM) *~ $(NAME) *#
 
 # Rule to remove object files
 oclean:
 	$(RM) $(OBJ)
 
 # Rule to remove temporary, executable, and object files
-fclean:
-	$(RM) $(NAME)
-	$(RM) *#
-	$(RM) *~ $(NAME)
-	$(RM) $(OBJ)
+fclean: clean oclean
 
 # Rule to recompile all source files
 re: fclean all
