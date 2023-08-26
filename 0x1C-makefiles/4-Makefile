@@ -36,8 +36,7 @@ clean:
 oclean: clean
 	$(RM) $(OBJ)
 
-fclean: oclean
-	$(RM) $(OBJ)
+fclean: oclean oclean
 
 # Rule to remove temporary, executable, and object files
 re: fclean all
