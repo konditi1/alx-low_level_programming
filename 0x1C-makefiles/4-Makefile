@@ -7,9 +7,6 @@ SRC = main.c school.c
 # Macro for the compiler
 CC = gcc
 
-# creating cflags
-CFLAGS = -Wall -Werror -Wextra -pedantic
-
 # Command to remove files
 RM = rm -f
 
@@ -19,24 +16,27 @@ OBJ = $(SRC:.c=.o)
 # Creating the compiled .o
 all: $(NAME)
 
+# Compilation command
+COMPILE = $(CC) -c $(CFLAGS) $< -o $@
+
 # Rule for building the executable
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $(NAME)
+    $(CC) $(OBJ) -o $(NAME)
 
 # Rule for compiling source file to obj file
 %.o: %.c
-	$(CC) -c $(CFLAGS) $< -o $@
+    $(COMPILE)
 
 # Clean rule to remove obj files and the executable
 clean:
-	@$(RM) $(NAME)
-	@$(RM) *#
-	$(RM) *~ $(NAME)
+    @$(RM) $(NAME)
+    @$(RM) *#
+    $(RM) *~ $(OBJ)
 
-oclean: clean
-	$(RM) $(OBJ)
+oclean:
+    $(RM) $(OBJ)
 
-fclean: oclean oclean
+fclean: clean oclean
 
 # Rule to remove temporary, executable, and object files
 re: fclean all
