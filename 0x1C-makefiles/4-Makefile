@@ -33,14 +33,10 @@ clean:
 	@$(RM) *#
 	$(RM) *~ $(NAME)
 
-fclean: 
-	@$(RM) $(NAME)
-	@$(RM) *#
-	$(RM) *~ $(NAME)
+oclean: clean
 	$(RM) $(OBJ)
 
-# Rule to remove object files
-oclean:
+fclean: oclean
 	$(RM) $(OBJ)
 
 # Rule to remove temporary, executable, and object files
