@@ -11,18 +11,16 @@
 */
 int linear_search(int *array, size_t size, int value)
 {
-    size_t i;
-    if (array == NULL){
-        return (-1);
-        }
+size_t i;
 
-    for (i = 0; i < size; i++)
-    {
-        printf("Value checked array[%d] = [%d]\n", (unsigned int)i, array[i]);
-        if (array[i] == value)
-        {
-            return (printf("Found [%d] at index [%d]\n", value, (unsigned int)i));
-        }
-    }
-    return (-1);
+if (array == NULL)
+return (-1);
+
+for (i = 0; i < size; i++)
+{
+printf("Value checked array[%lu] = [%d]\n", i, array[i]);
+if (array[i] == value)
+return (i);
+}
+return (-1);
 }
